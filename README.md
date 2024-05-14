@@ -2,7 +2,6 @@
 Welcome to my Dealership Workshop
 
 
-![Homescreen](Homescreen.JPEG)
 
 
 My code starts with loading the csv file by using a file reader this is the code I used for that.
