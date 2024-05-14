@@ -1,12 +1,18 @@
-# CarDealship
-Welcome to my Dealership Workshop
+package com.pluralsight.Models;
 
 
-![Homescreen](Homescreen.JPEG)
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.io.*;
+import java.util.Scanner;
 
+public class FileReaderManager {
 
-My code starts with loading the csv file by using a file reader this is the code I used for that.
+    // takes all the info from the csv file
+//only cars about dealership file
 
+        //reads through inventory file
         public static Dealership csvReader(String filename){
             File file = new File(filename);
             try (Scanner scanner = new Scanner(file)){
@@ -38,12 +44,16 @@ My code starts with loading the csv file by using a file reader this is the code
             return null;
         }
 
-After this we go to the UserInterface/Home Screen where the user is given options like remove vehicle from csv, add vehicle and show all vehicles. 
-Inside these functions I'm able to go through the csv file and return what the user request is.
+        // writes new things into csv file and saves
 
-If I want to safe all my changes I would quit by putting 99 into the terminal and the second I did that it also calls a file writer that I created which rewrites the whole csv file line by line. The code for that is below.
 
-public static void WriteDealToCsv(String filename, Dealership dealership)  {
+
+
+
+
+    // writes new things into csv file and saves
+
+    public static void WriteDealToCsv(String filename, Dealership dealership)  {
         File file = new File(filename);
 
 
@@ -72,5 +82,4 @@ public static void WriteDealToCsv(String filename, Dealership dealership)  {
         }
     }
 
-    This was my favorite piece of code because I have not used it before but it was really cool to see how it works and it allows me to safe every change made to my file.
-
+}
